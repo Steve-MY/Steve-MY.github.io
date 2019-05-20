@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+  
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  <meta name="author" content="Dong Yuanxin">
+  
+  
+  <title>一些分享 | Hexo</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="Hexo, Theme-AD">
+  
+
+  
+  <meta name="description" content="董沅鑫的小站">
+
+  
+
+  
+
+  
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+  
+
+  
+
+  
+
+  <script>
+  // theme-ad's config script
+  // it can be used in every script
+  
+  window.AD_CONFIG = {
+    leancloud: {"appid":"Hyq9wkH495DgNHWhDQCOfQSp-gzGzoHsz","appkey":"WaR7nrzhliHj9aVwdQzkdlGd","comment":false,"count":false},
+    welcome: {"enable":false,"interval":30},
+    start_time: "2019-05-20",
+    passwords: ["efe07af7441da2b69c4a41e42e73be4db47f66010a56900788a458354a7373ec", ],
+    is_post: true,
+    lock: false,
+    author: "Dong Yuanxin",
+    share: {"twitter":true,"facebook":true,"weibo":true,"qq":true,"wechat":true},
+    mathjax: true,
+    page_type: "",
+    root: "/"
+  };
+</script>
+
+  <script src="/vendor/sha256.min.js"></script>
+<script src="/js/auth.js"></script>
+<script src="/js/index.js"></script>
+<script src="/vendor/qrcode.min.js"></script>
+
+  
+    <link rel="icon" href="/images/favicon.ico">
+    <link rel="apple-touch-icon" href="/images/touch-icon.png">
+  
+
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/index.css">
+<link rel="stylesheet" href="/styles/components/highlight/highlight.css">
+
+  
+</head>
+  <body>
+    <header class="site-header">
+  <div class="site-header-brand">
+    
+      <span class="site-header-brand-title">
+        <a href="/">GODBMW</a>
+      </span>
+    
+    
+      <span class="site-header-brand-motto"> | 朱颜辞镜花辞树</span>
+    
+  </div>
+  <div class="site-header-right">
+    <nav class="site-header-navigation">
+      
+        <a href="/" target="_self">首页</a>
+      
+        <a href="/archives/" target="_self">归档</a>
+      
+        <a href="/tags/" target="_self">标签</a>
+      
+        <a href="/categories/" target="_self">分类</a>
+      
+        <a href="/friends/" target="_self">友链</a>
+      
+        <a href="/about/" target="_self">关于</a>
+      
+    </nav>
+    <div class="site-header-btn">
+      
+        <a href="https://github.com/Steve-MY/" target="_blank" id="site-github">
+          <i class="fa fa-github-alt"></i>
+        </a>
+      
+      <a href="javascript:void(0);" id="site-search">
+        <i class="fa fa-search"></i>
+      </a>
+      <a href="javascript:void(0);" id="site-nav-btn">
+        <i class="fa fa-ellipsis-v"></i>
+      </a>
+    </div>
+  </div>
+</header>
+<nav class="table-content" id="site-nav">
+  <div class="table-content-title">
+    <span>导航</span>
+  </div>
+  <div class="table-content-main">
+    <ol class="toc">
+      
+        <li class="toc-item">
+          <a href="/" target="_self">
+            首页
+          </a>
+        </li>
+      
+        <li class="toc-item">
+          <a href="/archives/" target="_self">
+            归档
+          </a>
+        </li>
+      
+        <li class="toc-item">
+          <a href="/tags/" target="_self">
+            标签
+          </a>
+        </li>
+      
+        <li class="toc-item">
+          <a href="/categories/" target="_self">
+            分类
+          </a>
+        </li>
+      
+        <li class="toc-item">
+          <a href="/friends/" target="_self">
+            友链
+          </a>
+        </li>
+      
+        <li class="toc-item">
+          <a href="/about/" target="_self">
+            关于
+          </a>
+        </li>
+      
+    </ol>
+  </div>
+</nav>
+<div id="site-process"></div>
+    <main>
+      
+  <div class="passage">
+  <div class="passage-meta">
+    <span>
+      <i class="fa fa-calendar"></i>2019-05-20
+    </span>
+    
+    
+      <span>
+        | <i class="fa fa-unlock-alt"></i>UNLOCK
+      </span>
+    
+  </div>
+  <h1 class="passage-title">
+    一些分享
+  </h1>
+  
+  <article class="passage-article">
+    <h3 id="CSS-scroll-behavior和JS-scrollIntoView让页面滚动平滑"><a href="#CSS-scroll-behavior和JS-scrollIntoView让页面滚动平滑" class="headerlink" title="CSS scroll-behavior和JS scrollIntoView让页面滚动平滑"></a>CSS scroll-behavior和JS scrollIntoView让页面滚动平滑</h3><h4 id="scroll-behavior"><a href="#scroll-behavior" class="headerlink" title="scroll-behavior"></a>scroll-behavior</h4><p>假设页面中有下面这一段HTML：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;#&quot; rel=&quot;internal&quot;&gt;返回顶部&lt;/a&gt;</span><br></pre></td></tr></table></figure></p>
+<p>当我们点击“返回顶部”这个文字链接的时候，页面就会“唰”地一声瞬间定位到浏览器顶部，速度之快，升势之猛，以至于你没有任何反应。所有这些反应的产生，归根结底在于我们这个滚动效果实在是太干巴巴了，机械生硬没有灵性不解风情。</p>
+<p>浏览器似乎也意识到这一点，从去年年底开始，已经开始支持浏览器的原生平滑滚动定位，CSS scroll-behavior属性和JS scrollIntoView()方法都可以。</p>
+<p>当用户手动导航或者 CSSOM scrolling API 触发滚动操作时，CSS 属性 scroll-behavior 为一个滚动框指定滚动行为，其他任何的滚动，例如那些由于用户行为而产生的滚动，不受这个属性的影响。在根元素中指定这个属性时，它反而适用于视窗。</p>
+<p><img src="https://image.zhangxinxu.com/image/blog/201810/2018-10-20_101654.png" alt="polifily"></p>
+<hr>
+<p><strong>值</strong>：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">auto: 滚动框立即滚动</span><br><span class="line">smooth: 滚动框通过一个用户代理预定义的时长、使用预定义的时间函数，来实现平稳的滚动，用户代理应遵循其平台的约定，如果有的话。</span><br></pre></td></tr></table></figure></p>
+<hr>
+<p><strong>用法</strong>：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">scollElement &#123;</span><br><span class="line">  scroll-behavior: smooth/auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<hr>
+<p>在PC浏览器中，网页默认滚动是在&#60;html&#62;标签上的，移动端大多数在&#60;body&#62;标签上，所以只需要加上一句：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">html, body &#123; scroll-behavior:smooth; &#125;</span><br></pre></td></tr></table></figure>
+<p>此时，可以让容器（非鼠标手势触发）的滚动变得平滑</p>
+<hr>
+<h4 id="scrollIntoView"><a href="#scrollIntoView" class="headerlink" title="scrollIntoView"></a>scrollIntoView</h4><p>根据 MDN的描述，Element.scrollIntoView()方法让当前的元素滚动到浏览器窗口的可视区域内。</p>
+<p><img src="https://user-gold-cdn.xitu.io/2017/10/6/fe81e231a974d45ac878b2c0c63ecb5d?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt="polifily1"></p>
+<hr>
+<p><strong>语法：</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">element.scrollIntoView(); // 等同于element.scrollIntoView(true) </span><br><span class="line">element.scrollIntoView(alignToTop); // Boolean型参数</span><br><span class="line">element.scrollIntoView(scrollIntoViewOptions); // Object型参数</span><br></pre></td></tr></table></figure></p>
+<hr>
+<p><strong>参数：</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">alignToTop</span><br><span class="line">一个Boolean值：</span><br><span class="line">  如果为true，元素的顶端将和其所在滚动区的可视区域的顶端对齐。相应的 scrollIntoViewOptions: &#123;block: &quot;start&quot;, inline: &quot;nearest&quot;&#125;。这是这个参数的默认值。</span><br><span class="line">  如果为false，元素的底端将和其所在滚动区的可视区域的底端对齐。相应的scrollIntoViewOptions: &#123;block: &quot;end&quot;, inline: &quot;nearest&quot;&#125;。</span><br><span class="line"></span><br><span class="line">scrollIntoViewOptions 一个带有选项的object：</span><br><span class="line">&#123;</span><br><span class="line">    behavior: &quot;auto&quot;  | &quot;instant&quot; | &quot;smooth&quot;,</span><br><span class="line">    block:    &quot;start&quot; | &quot;end&quot;,</span><br><span class="line">&#125;</span><br><span class="line">behavior 可选</span><br><span class="line">  定义缓动动画， &quot;auto&quot;, &quot;instant&quot;, 或 &quot;smooth&quot; 之一。默认为 &quot;auto&quot;。</span><br><span class="line">block 可选</span><br><span class="line">  &quot;start&quot;, &quot;center&quot;, &quot;end&quot;, 或 &quot;nearest&quot;之一。默认为 &quot;start&quot;。</span><br><span class="line">inline 可选</span><br><span class="line">  &quot;start&quot;, &quot;center&quot;, &quot;end&quot;, 或 &quot;nearest&quot;之一。默认为 &quot;nearest&quot;。</span><br></pre></td></tr></table></figure></p>
+<hr>
+<p>scrollIntoView,使用起来其实很简单，获取某个元素后，直接调用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div class=&quot;chunk&quot;&gt;&lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;btn&quot;&gt;click&lt;/div&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">    const btn = document.querySelector(&apos;.btn&apos;);</span><br><span class="line">    const test = document.querySelector(&apos;.chunk&apos;);</span><br><span class="line">    btn.addEventListener(&apos;click&apos;, function() &#123;</span><br><span class="line">      test.scrollIntoView();</span><br><span class="line">    &#125;)</span><br><span class="line">    &lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
+<p>当调用scrollIntoView的时候，scrollIntoView只接受一个参数，但接受两种类型的参数，分别是Boolean型参数和Object型参数。</p>
+<p>先说Boolean型参数，参数可以是true和false。如果为true，元素的顶端将和其所在滚动区的可视区域的顶端对齐。若为false，元素的底端将和其所在滚动区的可视区域的底端对齐。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div class=&quot;chunk&quot;&gt;&lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;btn-top&quot;&gt;up&lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;btn-bottom&quot;&gt;down&lt;/div&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">    const up = document.querySelector(&apos;.btn-top&apos;);</span><br><span class="line">    const down = document.querySelector(&apos;.btn-bottom&apos;);</span><br><span class="line">    const test = document.querySelector(&apos;.chunk&apos;);</span><br><span class="line">    up.addEventListener(&apos;click&apos;, function() &#123;</span><br><span class="line">      test.scrollIntoView(true);</span><br><span class="line">    &#125;);</span><br><span class="line">    down.addEventListener(&apos;click&apos;, function() &#123;</span><br><span class="line">      test.scrollIntoView(false);</span><br><span class="line">    &#125;);</span><br><span class="line">    &lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
+<p>之后是Object型参数，这个对象有两个选项，也就是对象里面的key。block与之前的Boolean型参数一致，不过值不再是true和false，是更语义化的start和end。另一个选项是behavior,MDN上给出三个可取的值，分别是auto、instant与smooth。这个选项决定页面是如何滚动的，实测auto与instant都是瞬间跳到相应的位置，查阅W3C后发现了这么一句:”The instant value of scroll-behavior was renamed to auto.”。因而基本可以确定两者表现是一致的。而smooth就是有动画的过程，可惜的是之前提及兼容性时说过，黄色其实不支持某个属性，就是不支持behavior取值为smooth。而且，实测了IE及移动端的UC浏览器后发现，它们根本就不支持Object型参数，因而在调用scrollIntoView({…})时，只有默认的结果，即scrollIntoView(true)。主要代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div class=&quot;chunk&quot;&gt;&lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;btn-top&quot;&gt;up&lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;btn-bottom&quot;&gt;down&lt;/div&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">    const up = document.querySelector(&apos;.btn-top&apos;);</span><br><span class="line">    const down = document.querySelector(&apos;.btn-bottom&apos;);</span><br><span class="line">    const test = document.querySelector(&apos;.chunk&apos;);</span><br><span class="line">    up.addEventListener(&apos;click&apos;, function() &#123;</span><br><span class="line">      test.scrollIntoView(&#123;</span><br><span class="line">        block: &apos;start&apos;,</span><br><span class="line">        behavior: &apos;smooth&apos;</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line">    down.addEventListener(&apos;click&apos;, function() &#123;</span><br><span class="line">      test.scrollIntoView(&#123;</span><br><span class="line">        block: &apos;end&apos;,</span><br><span class="line">        behavior: &apos;smooth&apos;</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line">    &lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure></p>
+
+  </article>
+  <aside class="table-content" id="site-toc">
+  <div class="table-content-title">
+    <i class="fa fa-arrow-right fa-lg" id="site-toc-hide-btn"></i>
+    <span>目录</span>
+  </div>
+  <div class="table-content-main">
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS-scroll-behavior和JS-scrollIntoView让页面滚动平滑"><span class="toc-text">CSS scroll-behavior和JS scrollIntoView让页面滚动平滑</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#scroll-behavior"><span class="toc-text">scroll-behavior</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#scrollIntoView"><span class="toc-text">scrollIntoView</span></a></li></ol></li></ol>
+  </div>
+</aside>
+  
+  
+</div>
+
+    </main>
+    
+    <div class="site-footer-wrapper">
+  <footer class="site-footer">
+    
+      
+        <div class="site-footer-col">
+          <h5 class="site-footer-title">博客推荐</h5>
+          
+            <span class="site-footer-item">
+              <a href="https://godbmw.com/" target="_blank">GodBMW</a>
+            </span>
+          
+            <span class="site-footer-item">
+              <a href="http://ruanyifeng.com/" target="_blank">阮一峰的个人网站</a>
+            </span>
+          
+        </div>
+      
+        <div class="site-footer-col">
+          <h5 class="site-footer-title">系列教程</h5>
+          
+            <span class="site-footer-item">
+              <a href="https://godbmw.com/categories/webpack4%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B/" target="_blank">webpack4系列教程</a>
+            </span>
+          
+            <span class="site-footer-item">
+              <a href="https://godbmw.com/design-patterns/" target="_blank">设计模式手册</a>
+            </span>
+          
+        </div>
+      
+        <div class="site-footer-col">
+          <h5 class="site-footer-title">抓到我</h5>
+          
+            <span class="site-footer-item">
+              <a href target="_self">掘金</a>
+            </span>
+          
+            <span class="site-footer-item">
+              <a href target="_self">思否</a>
+            </span>
+          
+        </div>
+      
+    
+    <div class="site-footer-info">
+      <i class="fa fa-clock-o"></i> 本站已稳定运行<span id="site-time"></span>
+    </div>
+    
+    
+      <div class="site-footer-info">
+        <i class="fa fa-at"></i> Email: 13818322034@163.com
+      </div>
+    
+    <div class="site-footer-info">
+      <i class="fa fa-copyright"></i> 
+      2019 <a href="https://github.com/dongyuanxin/theme-ad/" target="_blank">Theme-AD</a>.
+      Created by <a href="https://godbmw.com/" target="_blank">GodBMW</a>.
+      All rights reserved.
+    </div>
+  </footer>
+</div>
+    <div id="site-layer" style="display:none;">
+  <div class="site-layer-content">
+    <div class="site-layer-header">
+      <span class="site-layer-header-title" id="site-layer-title"></span>
+      <i class="fa fa-close" id="site-layer-close"></i>
+    </div>
+    <div class="site-layer-body" id="site-layer-container">
+      <div class="site-layer-input" id="site-layer-search" style="display: none;">
+        <input type="text">
+        <i class="fa fa-search"></i>
+      </div>
+      
+        <div class="site-layer-reward" id="site-layer-reward" style="display: none;">
+          
+            <div>
+              <img src="/images/wechat.png" alt="WeChat">
+              
+                <p>WeChat</p>
+              
+            </div>
+          
+            <div>
+              <img src="/images/alipay.png" alt="AliPay">
+              
+                <p>AliPay</p>
+              
+            </div>
+          
+        </div>
+      
+      <div id="site-layer-welcome" style="display:none;"></div>
+    </div>
+  </div>
+</div>
+    
+
+<div class="bottom-bar">
+  <div class="bottom-bar-left">
+    <a href="/passages/2019-05-20-localforage/" data-enable="true">
+      <i class="fa fa-arrow-left"></i>
+    </a>
+    <a href="javascript:void(0);" data-enable="false">
+      <i class="fa fa-arrow-right"></i>
+    </a>
+  </div>
+  <div class="bottom-bar-right">
+    <a href="javascript:void(0);" data-enable="true" id="site-toc-show-btn">
+      <i class="fa fa-bars"></i>
+    </a>
+    
+    <a href="javascript:void(0);" id="site-toggle-share-btn">
+      <i class="fa fa-share-alt"></i>
+    </a>
+    
+      <a href="javascript:void(0);" id="site-reward">
+        <i class="fa fa-thumbs-up"></i>
+      </a>
+    
+    <a href="javascript:void(0);" id="back-top-btn">
+      <i class="fa fa-chevron-up"></i>
+    </a>
+  </div>
+</div>
+    <div id="share-btn">
+  
+    <a id="share-btn-twitter" href="javascript:void(0);" target="_blank">
+      <i class="fa fa-twitter"></i>
+    </a>
+  
+  
+    <a id="share-btn-facebook" href="javascript:void(0);" target="_blank">
+      <i class="fa fa-facebook"></i>
+    </a>
+  
+  
+    <a id="share-btn-weibo" href="javascript:void(0);" target="_blank">
+      <i class="fa fa-weibo"></i>
+    </a>
+  
+  
+    <a id="share-btn-qq" href="javascript:void(0);" target="_blank">
+      <i class="fa fa-qq"></i>
+    </a>
+  
+  
+    <a id="share-btn-wechat" href="javascript:void(0);" target="_blank">
+      <i class="fa fa-wechat"></i>
+    </a>
+  
+</div>
+    
+
+
+
+
+
+    
+  </body>
+</html>
